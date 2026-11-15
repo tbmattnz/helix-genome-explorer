@@ -1,0 +1,25 @@
+{
+  "snapshot": "2026-11-16",
+  "files": {
+    "gene-regions.json": {
+      "bytes": 794337,
+      "sha256": "22ebead88bd5234be1f0948e3b8d99ada9a2633ff478661f929814503eafa58b"
+    },
+    "genes.json": {
+      "bytes": 1439222,
+      "sha256": "13ab3af7a48fd2c12e3f1d39f30b9533f2c4913e4cc36a6ee1e3ca81082436e6"
+    },
+    "genome-overview.json": {
+      "bytes": 72690,
+      "sha256": "0311c81e639c84b334c8e6b35814186ca63c6a0c70b3670e74c9963dd606f3bb"
+    },
+    "tours.json": {
+      "bytes": 7521,
+      "sha256": "6236448622a0d1bbfbc527e098ba83ddd43a67c4f673b73ce3defba6aa4c60e5"
+    },
+    "variants.json": {
+      "bytes": 8864,
+      "sha256": "22d06eb288792cca5b671b15ebf665694a8505879792fd1d6398f41c68c0a9f3"
+    }
+  }
+}

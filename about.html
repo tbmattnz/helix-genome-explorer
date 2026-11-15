@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About and reuse · HELIX</title><link rel="icon" href="./favicon.svg"><style>body{font:18px/1.6 system-ui,sans-serif;color:#172630;background:#f5f7f8;max-width:48rem;margin:3rem auto;padding:0 1.25rem}a{color:#00636b}h1,h2{line-height:1.2}li{margin:.6rem 0}code{font-size:.85em}footer{border-top:1px solid #bcc8cd;margin-top:2rem;padding-top:1rem}</style></head><body>
+<a href="./">← Explore HELIX</a><h1>An open classroom genome explorer</h1>
+<p>HELIX connects the scale of a chromosome with genes, DNA letters, proteins and selected variants. It was developed by Matt Abraham / Teacher's Buddy and extracted as a standalone educational application.</p>
+<p><a href="https://github.com/tbmattnz/helix-genome-explorer">Source and adaptation guide</a> · <a href="https://github.com/tbmattnz/helix-genome-explorer/releases/tag/v0.1.0">Release 0.1.0</a></p>
+<h2>Use it, adapt it, build on it</h2><p>The original application code and teaching text are MIT licensed. Adapt the React views, reuse the independent sequence and coordinate helpers, or write your own lesson tours in JSON. Scientific datasets keep their source-specific terms.</p>
+<h2>Data sources</h2><ul>
+<li><a href="https://genome.ucsc.edu/license/">GRCh38 and UCSC Genome Browser</a>: chromosome lengths, bands and selected DNA regions; publicly reusable data under the provider's terms.</li>
+<li><a href="https://www.gencodegenes.org/human/release_46.html">GENCODE release 46</a>: gene annotation and protein sequences; use without restrictions under the GENCODE data-release policy.</li>
+<li><a href="https://www.genenames.org/about/license/">HGNC</a>: approved gene names, CC0.</li>
+<li><a href="https://gnomad.broadinstitute.org/policies">gnomAD v4</a>: selected variant alleles and aggregate frequencies, CC0 primary data. Restricted third-party annotations are not included.</li></ul>
+<p>Please acknowledge these providers when reusing the data. They do not endorse HELIX. Snapshot versions and transformation notes are embedded in each <a href="./data-manifest.json">versioned data file</a>; original retrieval dates and generation scripts were not available in the app export.</p>
+<h2>Coverage and teaching notes</h2><p>The snapshot covers 24 nuclear chromosomes, 19,398 protein-coding gene records, 14 regions, 11 variants and three guided tours. It omits mitochondrial DNA and non-coding genes. X/Y shared genes occur in both chromosomes. Coordinates are zero-based and end-exclusive.</p>
+<p>Regions, variant summaries and tours are draft teaching examples for educator review. The reference genome is one example, not a definition of normal DNA. gnomAD frequencies do not represent every population equally. HELIX is not a diagnostic tool.</p>
+<h2>Software notices</h2><p>HELIX uses React, React DOM, Lucide and Tailwind CSS. Their notices accompany the release in <a href="./THIRD_PARTY_NOTICES.txt">THIRD_PARTY_NOTICES.txt</a>.</p>
+<footer>No sign-in, analytics, uploads or AI calls. All application data is served as static files; hosting providers may keep access logs.</footer>
+</body></html>

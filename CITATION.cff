@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use HELIX, please cite this software and acknowledge the data providers in DATA_SOURCES.md."
+type: software
+title: "HELIX: Classroom genome explorer"
+authors:
+  - family-names: Abraham
+    given-names: Matt
+    affiliation: "Teacher's Buddy"
+version: 0.1.0
+license: MIT
+abstract: "A standalone educational genome explorer connecting chromosomes, genes, DNA, proteins and selected variants using public scientific datasets."
+date-released: 2026-11-16
+repository-code: "https://github.com/tbmattnz/helix-genome-explorer"
+url: "https://tbmattnz.github.io/helix-genome-explorer/"
