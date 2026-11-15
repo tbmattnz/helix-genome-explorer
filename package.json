@@ -1,0 +1,32 @@
+{
+  "name": "helix-genome-explorer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node scripts/test.mjs"
+  },
+  "dependencies": {
+    "react": "19.1.10",
+    "react-dom": "19.1.10",
+    "lucide-react": "0.544.0"
+  },
+  "devDependencies": {
+    "vite": "7.3.7",
+    "@tailwindcss/vite": "4.2.2",
+    "tailwindcss": "4.2.2",
+    "esbuild": "0.28.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tbmattnz/helix-genome-explorer.git"
+  },
+  "homepage": "https://tbmattnz.github.io/helix-genome-explorer/"
+}

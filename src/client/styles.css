@@ -1,0 +1,132 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --color-bg: #f6f8f9;
+  --color-surface: #ffffff;
+  --color-surface-muted: #eef2f4;
+  --color-text: #14212b;
+  --color-text-muted: #4a5a66;
+  --color-divider: #d5dde2;
+  --color-divider-strong: #5f6d78;
+  --color-accent: #0b6e72;
+  --color-accent-strong: #08575a;
+  --color-accent-soft: #e2f1f1;
+  --color-on-accent: #ffffff;
+  --color-danger: #b42318;
+  --color-danger-strong: #8f1c13;
+  --color-success: #1d6b3a;
+  --color-focus: #1a4fd6;
+  --color-skeleton: #dfe6ea;
+  --color-track: #dfe6ea;
+  --color-disabled: #e4e8eb;
+  --color-on-disabled: #4f5d68;
+  --color-overlay: rgb(20 33 43 / 0.45);
+
+  /* Chromosome bands (Giemsa stain shades) */
+  --color-band-gneg: #ffffff;
+  --color-band-gpos25: #d2d7db;
+  --color-band-gpos50: #a1a9b0;
+  --color-band-gpos75: #69737b;
+  --color-band-gpos100: #2b3238;
+  --color-band-acen: #b4534a;
+  --color-band-gvar: #dfe3e6;
+  --color-band-hatch: #59626a;
+  --color-band-stalk: #c4cad0;
+  --color-band-unknown: #efe4c3;
+  --color-band-outline: #3c4650;
+
+  /* Gene density, light to dark */
+  --color-density-0: #eef2f4;
+  --color-density-1: #c4e2e0;
+  --color-density-2: #8cc6c2;
+  --color-density-3: #4fa29d;
+  --color-density-4: #237d78;
+  --color-density-5: #0a5154;
+
+  /* Outline of the visible part on the zoom overview */
+  --color-view-box: #1a4fd6;
+
+  /* Region view: coding exon parts (tall), untranslated ends (short, outlined), introns (thin line) */
+  --color-exon-coding: #1f4f7a;
+  --color-exon-utr: #c9daea;
+  --color-intron: #4a5a66;
+
+  /* DNA letters: four distinct colours, each 4.5:1 or more; the letter itself is always shown */
+  --color-base-a: #1d6b3a;
+  --color-base-c: #1a4fd6;
+  --color-base-g: #7a5200;
+  --color-base-t: #b0185f;
+  --color-base-n: #4a5a66;
+  /* Stop signal outline and text (also written as "Stop") */
+  --color-stop: #b42318;
+  /* Variant markers, letter outlines and the variant card border (always with a shape, outline or label too) */
+  --color-variant-mark: #6b2fa0;
+
+  /* Gene track: bars, and the selected gene (also outlined and bold, not colour alone) */
+  --color-gene: #2f5d8a;
+  --color-gene-selected: #8a3b00;
+}
+
+/* Keep focused or scrolled-to controls clear of the pinned where-am-I strip (pinned from 640px wide). */
+@media (min-width: 640px) {
+  html { scroll-padding-bottom: 7rem; }
+  html.class-display { scroll-padding-bottom: 11rem; }
+}
+
+html.class-display { font-size: 125%; }
+@media (min-width: 1600px) { html.class-display { font-size: 150%; } }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.helix-progress {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 6px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-track);
+  overflow: hidden;
+}
+.helix-progress::-webkit-progress-bar { background: var(--color-track); border-radius: 999px; }
+.helix-progress::-webkit-progress-value { background: var(--color-accent); border-radius: 999px; transition: width 120ms ease-out; }
+.helix-progress::-moz-progress-bar { background: var(--color-accent); border-radius: 999px; }
+.helix-progress.is-failed::-webkit-progress-value { background: var(--color-danger); }
+.helix-progress.is-failed::-moz-progress-bar { background: var(--color-danger); }
+
+/* Guided tour panel: along the top of the page on narrow screens (sticky, with its text scrolling inside),
+   fixed on the right from 760px with room left for the pinned where-am-I strip below it. */
+.tour-panel {
+  position: sticky;
+  top: 0;
+  border-bottom-width: 2px;
+  max-height: 45vh;
+}
+.tour-panel .tour-body { min-height: 0; flex: 1 1 auto; }
+html:has(.tour-panel) { scroll-padding-top: 46vh; }
+@media (min-width: 760px) {
+  .tour-panel {
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+    width: 24rem;
+    max-height: calc(100vh - 14rem);
+    border-width: 2px;
+    border-radius: 0.75rem;
+  }
+  html:has(.tour-panel) { scroll-padding-top: 0; }
+  .tour-on .explorer-content { padding-right: 26rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
